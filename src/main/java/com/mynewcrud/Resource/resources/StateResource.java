@@ -56,5 +56,4 @@ public class StateResource {
 	public Response delete(@PathParam("id") Long id) {
 		return stateService.delete(id);
 	}
-
 }
