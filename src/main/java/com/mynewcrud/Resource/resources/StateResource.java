@@ -16,9 +16,6 @@ import jakarta.ws.rs.core.UriInfo;
 @Produces(MediaType.APPLICATION_JSON)
 public class StateResource {
 
-	@Context
-	UriInfo uriInfo;
-
 	@Inject
 	StateService stateService;
 
@@ -39,7 +36,7 @@ public class StateResource {
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Transactional
 	public Response persist(State state) {
-		return stateService.persist(state, uriInfo);
+		return stateService.persist(state);
 	}
 
 	@PUT
